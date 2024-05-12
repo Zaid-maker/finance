@@ -1,23 +1,23 @@
-import { Hono } from 'hono'
-import { handle } from 'hono/vercel'
+import { zValidator } from "@hono/zod-validator";
+import { Hono } from "hono";
+import { handle } from "hono/vercel";
+import { z } from "zod";
 
-export const runtime = 'edge';
+export const runtime = "edge";
 
-const app = new Hono().basePath('/api')
+const app = new Hono().basePath("/api");
 
-app.get('/hello', (c) => {
-    return c.json({
-        message: 'Hello Next.js!',
-    })
-})
-    .get('/hello/:test', (c) => {
-        const test = c.req.param('test')
-
+app
+    .get("/hello", (c) => {
         return c.json({
-            message: 'Hello world this is test',
-            test: test
-        })
+            message: "Hello Next.js!",
+        });
     })
+    .get("/hello/:test", (c) => {
+        return c.json({
+            message: "Hello world this is test",
+        });
+    });
 
-export const GET = handle(app)
-export const POST = handle(app)
+export const GET = handle(app);
+export const POST = handle(app);
