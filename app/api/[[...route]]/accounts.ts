@@ -1,8 +1,6 @@
 import { Hono } from "hono";
 
-const app = new Hono();
-
-app.get("/", (c) => {
+const app = new Hono().get("/", (c) => {
     return c.json({ accounts: [] });
 });
 
