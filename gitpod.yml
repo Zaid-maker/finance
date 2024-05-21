@@ -1,0 +1,13 @@
+image: gitpod/workspace-bun
+
+tasks:
+  - name: Install
+    init: |
+      # install dependencies
+      bun install
+
+    command: |
+      bun dev
+
+ports:
+  - port: 3000
