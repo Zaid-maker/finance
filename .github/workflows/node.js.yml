@@ -23,3 +23,17 @@ jobs:
 
       - name: Lint
         run: bun run lint
+
+      - name: Format
+        run: bun run format
+
+      - name: Set GIt Config
+        run: |
+          git config --global user.name "devmirza-bot"
+          git config --global user.email "mirzazaid4740@gmail.com"
+
+      - name: Commit Changes
+        run: |
+          git add .
+          git commit -m '[ci] format'
+          git push
