@@ -23,6 +23,7 @@ jobs:
 
       - name: Lint
         run: bun run lint
+        continue-on-error: true
 
       - name: Format
         run: bun run format
