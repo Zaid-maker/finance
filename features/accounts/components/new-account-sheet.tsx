@@ -5,8 +5,8 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import React from "react";
-import { useNewAccount } from "../hooks/use-new-account";
+import { AccountForm } from "@/features/accounts/components/account-form";
+import { useNewAccount } from "@/features/accounts/hooks/use-new-account";
 
 export const NewAccountSheet = () => {
   const { isOpen, onClose } = useNewAccount();
@@ -20,6 +20,7 @@ export const NewAccountSheet = () => {
             Create a new account to track your transactions.
           </SheetDescription>
         </SheetHeader>
+        <AccountForm onSubmit={() => {}} disabled={false} />
       </SheetContent>
     </Sheet>
   );
