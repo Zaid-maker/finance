@@ -37,7 +37,7 @@ jobs:
       - name: Commit All Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_user_name: devmirza-bot
-          commit_user_email: mirzazaid4740@gmail.com
-          commit_author: DevMirza Bot <mirzazaid4740@gmail.com>
+          commit_user_name: My GitHub Actions Bot
+          commit_user_email: my-github-actions-bot@example.org
+          commit_author: Author <actions@github.com>
           commit_message: "[ci] Format changes"
