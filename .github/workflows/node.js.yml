@@ -9,9 +9,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Setup Bun Env
         uses: oven-sh/setup-bun@v1
@@ -28,13 +34,10 @@ jobs:
       - name: Format
         run: bun run format
 
-      - name: Set GIt Config
-        run: |
-          git config --global user.name "devmirza-bot"
-          git config --global user.email "mirzazaid4740@gmail.com"
-
-      - name: Commit Changes
-        run: |
-          git add .
-          git commit -m '[ci] format'
-          git push
+      - name: Commit All Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_user_name: devmirza-bot
+          commit_user_email: mirzazaid4740@gmail.com
+          commit_author: DevMirza Bot <mirzazaid4740@gmail.com>
+          commit_message: "[ci] Format changes"
