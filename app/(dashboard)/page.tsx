@@ -1,6 +1,7 @@
 "use client";
 
 import { useGetAccounts } from "@/features/accounts/api/use-get-accounts";
+import React from "react";
 
 export default function Home() {
   const accountsQuery = useGetAccounts();
