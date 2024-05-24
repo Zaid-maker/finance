@@ -37,14 +37,6 @@ jobs:
       - name: Format
         run: bun run format
 
-      - name: 'Run if changes have been detected'
-        if: steps.auto-commit-action.outputs.changes_detected == 'true'
-        run: echo "Changes!"
-
-      - name: 'Run if no changes have been detected'
-        if: steps.auto-commit-action.outputs.changes_detected == 'false'
-        run: echo "No Changes!"
-
       - name: Commit All Changes
         uses: stefanzweifel/git-auto-commit-action@v5.0.1
         id: auto-commit-action
@@ -53,4 +45,4 @@ jobs:
           commit_user_email: my-github-actions-bot@example.org
           commit_author: Author <actions@github.com>
           commit_message: '[ci] Format changes'
-          skip_dirty_check: true
+          push: ${{ steps.auto-commit-action.outputs.changes_detected }}
