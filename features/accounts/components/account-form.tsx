@@ -29,7 +29,7 @@ export const AccountForm = ({ id, defaultValues, onSubmit, onDelete, disabled }:
   });
 
   const handleSubmit = (values: FormValues) => {
-    onSubmit(values)
+    onSubmit(values);
   };
 
   const handleDelete = () => {
