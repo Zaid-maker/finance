@@ -1,33 +1,33 @@
-"use client";
+'use client';
 
-import { useMedia } from "react-use";
-import React, { useState } from "react";
-import { NavButton } from "@/components/nav-button";
-import { usePathname, useRouter } from "next/navigation";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { useMedia } from 'react-use';
+import React, { useState } from 'react';
+import { NavButton } from '@/components/nav-button';
+import { usePathname, useRouter } from 'next/navigation';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
+import { Menu } from 'lucide-react';
 
 const routes = [
   {
-    href: "/",
-    label: "Overview",
+    href: '/',
+    label: 'Overview',
   },
   {
-    href: "/transactions",
-    label: "Transactions",
+    href: '/transactions',
+    label: 'Transactions',
   },
   {
-    href: "/accounts",
-    label: "Accounts",
+    href: '/accounts',
+    label: 'Accounts',
   },
   {
-    href: "/categories",
-    label: "Categories",
+    href: '/categories',
+    label: 'Categories',
   },
   {
-    href: "/settings",
-    label: "Settings",
+    href: '/settings',
+    label: 'Settings',
   },
 ];
 
@@ -36,7 +36,7 @@ export const Navigation = () => {
 
   const router = useRouter();
   const pathname = usePathname();
-  const isMobile = useMedia("(max-width: 1024px)", false);
+  const isMobile = useMedia('(max-width: 1024px)', false);
 
   const onClick = (href: string) => {
     router.push(href);
@@ -51,7 +51,7 @@ export const Navigation = () => {
           <Button
             variant="outline"
             size="sm"
-            className="font-normal bg-white/10 hover:bg-white/20 hover:text-white border-none focus-visible:ring-offset-0 focus-visible:ring-transparent outline-none text-white focus:bg-white/30 transition"
+            className="border-none bg-white/10 font-normal text-white outline-none transition hover:bg-white/20 hover:text-white focus:bg-white/30 focus-visible:ring-transparent focus-visible:ring-offset-0"
           >
             <Menu className="size-4" />
           </Button>
@@ -61,7 +61,7 @@ export const Navigation = () => {
             {routes.map((route) => (
               <Button
                 key={route.href}
-                variant={route.href === pathname ? "secondary" : "ghost"}
+                variant={route.href === pathname ? 'secondary' : 'ghost'}
                 onClick={() => onClick(route.href)}
                 className="w-full justify-start"
               >
@@ -75,7 +75,7 @@ export const Navigation = () => {
   }
 
   return (
-    <nav className="hidden lg:flex items-center gap-x-2 overflow-x-auto">
+    <nav className="hidden items-center gap-x-2 overflow-x-auto lg:flex">
       {routes.map((route) => (
         <NavButton
           key={route.href}

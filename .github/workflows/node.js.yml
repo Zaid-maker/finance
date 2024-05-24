@@ -2,11 +2,11 @@ name: Node.js Workflow
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
   pull_request:
-    branches: ["main"]
+    branches: ['main']
 
-permissions: 
+permissions:
   contents: write
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
       - name: Setup Bun Env
         uses: oven-sh/setup-bun@v1
         with:
-          bun-version: "latest"
+          bun-version: 'latest'
 
       - name: Install
         run: bun install
@@ -43,5 +43,5 @@ jobs:
           commit_user_name: My GitHub Actions Bot
           commit_user_email: my-github-actions-bot@example.org
           commit_author: Author <actions@github.com>
-          commit_message: "[ci] Format changes"
+          commit_message: '[ci] Format changes'
           skip_dirty_check: true

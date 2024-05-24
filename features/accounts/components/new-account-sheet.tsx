@@ -4,9 +4,9 @@ import {
   SheetDescription,
   SheetHeader,
   SheetTitle,
-} from "@/components/ui/sheet";
-import { AccountForm } from "@/features/accounts/components/account-form";
-import { useNewAccount } from "@/features/accounts/hooks/use-new-account";
+} from '@/components/ui/sheet';
+import { AccountForm } from '@/features/accounts/components/account-form';
+import { useNewAccount } from '@/features/accounts/hooks/use-new-account';
 
 export const NewAccountSheet = () => {
   const { isOpen, onClose } = useNewAccount();
@@ -16,9 +16,7 @@ export const NewAccountSheet = () => {
       <SheetContent className="space-y-4">
         <SheetHeader>
           <SheetTitle>New Account</SheetTitle>
-          <SheetDescription>
-            Create a new account to track your transactions.
-          </SheetDescription>
+          <SheetDescription>Create a new account to track your transactions.</SheetDescription>
         </SheetHeader>
         <AccountForm onSubmit={() => {}} disabled={false} />
       </SheetContent>
