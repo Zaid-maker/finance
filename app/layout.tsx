@@ -4,6 +4,7 @@ import { ClerkProvider } from '@clerk/nextjs';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { SheetProvider } from '@/providers/sheet-provider';
+import { Toaster } from '@/components/ui/sonner';
 
 import './globals.css';
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         <body className={inter.className}>
           <QueryProvider>
             <SheetProvider />
+            <Toaster />
             {children}
           </QueryProvider>
         </body>

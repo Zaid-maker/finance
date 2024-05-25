@@ -1,3 +1,4 @@
+import { toast } from "sonner";
 import { client } from "@/lib/hono";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { InferRequestType, InferResponseType } from "hono";
@@ -19,7 +20,13 @@ export const useCreateAccount = () => {
             return await response.json()
         },
         onSuccess: () => {
+            toast.success("Account Created!")
             queryClient.invalidateQueries({ queryKey: ['accounts'] })
+        },
+        onError: () => {
+            toast.error("Failed to create account")
         }
     })
+
+    return mutation
 }
