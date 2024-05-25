@@ -32,9 +32,13 @@ export const NewAccountSheet = () => {
           <SheetTitle>New Account</SheetTitle>
           <SheetDescription>Create a new account to track your transactions.</SheetDescription>
         </SheetHeader>
-        <AccountForm onSubmit={onSubmit} disabled={false} defaultValues={{
-          name: ''
-        }} />
+        <AccountForm
+          onSubmit={onSubmit}
+          disabled={false}
+          defaultValues={{
+            name: '',
+          }}
+        />
       </SheetContent>
     </Sheet>
   );
