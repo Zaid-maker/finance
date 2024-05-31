@@ -26,7 +26,7 @@
     "@tanstack/react-query": "^5.37.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "drizzle-orm": "0.30.10",
+    "drizzle-orm": "0.31.0",
     "drizzle-zod": "0.5.1",
     "eslint-plugin-react-compiler": "^0.0.0-experimental-c8b3f72-20240517",
     "hono": "^4.3.5",
