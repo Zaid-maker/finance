@@ -10,13 +10,13 @@ import { DataTable } from '@/components/data-table';
 
 const data: Payment[] = [
   {
-    id: "728ed52f",
+    id: '728ed52f',
     amount: 100,
-    status: "pending",
-    email: "m@example.com",
+    status: 'pending',
+    email: 'm@example.com',
   },
   // ...
-]
+];
 
 const AccountsPage = () => {
   const newAccount = useNewAccount();
