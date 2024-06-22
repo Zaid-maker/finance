@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
 import { createId } from '@paralleldrive/cuid2';
 import { db } from '@/db/drizzle';
-import { accounts, insertAccountSchema } from '@/db/schema';
+import { accounts, insertAccountsSchema } from '@/db/schema';
 import { clerkMiddleware, getAuth } from '@hono/clerk-auth';
 import { eq } from 'drizzle-orm';
 import { zValidator } from '@hono/zod-validator';
@@ -29,7 +29,7 @@ const app = new Hono()
     clerkMiddleware(),
     zValidator(
       'json',
-      insertAccountSchema.pick({
+      insertAccountsSchema.pick({
         name: true,
       }),
     ),
