@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "check-types": "tsc --noEmit", 
+    "check-types": "tsc --noEmit",
     "format": "prettier --write .",
     "db:generate": "drizzle-kit generate:pg --schema db/schema.ts --out ./drizzle",
     "db:migrate": "bun ./scripts/migrate.ts",
