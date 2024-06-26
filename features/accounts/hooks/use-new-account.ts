@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 type NewAccountState = {
   isOpen: boolean;
@@ -8,10 +8,6 @@ type NewAccountState = {
 
 export const useNewAccount = create<NewAccountState>((set) => ({
   isOpen: false,
-  onOpen() {
-    set({ isOpen: true });
-  },
-  onClose() {
-    set({ isOpen: false });
-  },
+  onOpen: () => set({ isOpen: true }),
+  onClose: () => set({ isOpen: false }),
 }));
