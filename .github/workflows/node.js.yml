@@ -19,7 +19,7 @@ jobs:
           bun-version: "latest"
 
       - name: Install Turbo
-        run: bun add turbo
+        run: bun add -g turbo
 
       - name: Install
         run: bun install
