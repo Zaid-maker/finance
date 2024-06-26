@@ -18,5 +18,11 @@ jobs:
         with:
           bun-version: "latest"
 
+      - name: Install Turbo
+        run: bun add turbo
+
       - name: Install
         run: bun install
+
+      - name: Bulld Lint & CheckTypes
+        run: turbo build lint check-types
