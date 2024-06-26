@@ -52,8 +52,13 @@
     "@types/react-dom": "^18",
     "dotenv": "^16.4.5",
     "drizzle-kit": "0.20.17",
+<<<<<<< HEAD
     "eslint": "8",
     "eslint-config-next": "14.2.4",
+=======
+    "eslint": "^9.3.0",
+    "eslint-config-next": "14.2.3",
+>>>>>>> parent of b2fb285 (use eslint@8)
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.34.1",
