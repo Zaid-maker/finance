@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "extends": [
     "next",
     "next/core-web-vitals",
@@ -6,6 +7,11 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier"
+=======
+  "extends": "next/core-web-vitals",
+  "plugins": [
+    "eslint-plugin-react-compiler"
+>>>>>>> parent of 73d1b41 (update)
   ],
   "plugins": ["eslint-plugin-react-compiler", "react", "@typescript-eslint"],
   "rules": {

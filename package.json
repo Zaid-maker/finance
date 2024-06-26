@@ -7,8 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+<<<<<<< HEAD
     "check-types": "tsc --noEmit",
     "format": "prettier --write .",
+=======
+>>>>>>> parent of 73d1b41 (update)
     "db:generate": "drizzle-kit generate:pg --schema db/schema.ts --out ./drizzle",
     "db:migrate": "bun ./scripts/migrate.ts",
     "db:studio": "drizzle-kit studio"
@@ -53,6 +56,7 @@
     "dotenv": "^16.4.5",
     "drizzle-kit": "0.20.17",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "eslint": "8",
     "eslint-config-next": "14.2.4",
 =======
@@ -62,10 +66,12 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.34.1",
+=======
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+>>>>>>> parent of 73d1b41 (update)
     "pg": "^8.11.5",
     "postcss": "^8",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
